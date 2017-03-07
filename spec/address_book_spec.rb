@@ -38,9 +38,9 @@
    end
 	 
 	 describe "#remove_entry" do
-		 it "removes an entry from the address book" do
-			 book = AddressBook.new
-			 expect(book.entries.size).to eq(0)
-		 end
-	 end
+  	it "removes an entry from the address book" do
+    	book = AddressBook.new
+    	expect(book.entries.size).to eq(0)
+  end
+end
  end
