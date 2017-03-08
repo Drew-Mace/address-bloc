@@ -6,7 +6,7 @@
        book = AddressBook.new
        expect(book).to respond_to(:entries)
      end
-	   
+    
     it "initializes entries as an array" do
        book = AddressBook.new
        expect(book.entries).to be_an(Array)
