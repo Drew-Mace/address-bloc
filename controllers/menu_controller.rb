@@ -58,8 +58,8 @@ class MenuController
         system "clear"
         puts "Sorry, that is not a valid input"
         main_menu
-      end
     end
+  end
     
     def view_entry_number
       system "clear"
