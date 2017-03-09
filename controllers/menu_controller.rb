@@ -18,7 +18,8 @@ class MenuController
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
     puts "5 - View Entry Number n"
-    puts "6 - Exit"
+    puts "6 - Delete all entries"
+    puts "7 - Exit"
     print "Enter your selection: "
     
     # #3
@@ -47,7 +48,10 @@ class MenuController
         system "clear"
         view_entry_number
         main_menu
-      when 6 
+      when 6
+        demolish
+        main_menu
+      when 7 
         puts "Good-bye!"
         
         # #8
@@ -66,6 +70,10 @@ class MenuController
       print "Which enter would you like to view?: "
       selection = gets.to_i
       print address_book.entries[selection - 1].to_s ? (selection > 0) : (puts "Please enter a valid selection")
+    end
+    
+    def demolish
+      address_book.entries.delete_at(0)
     end
     
     # #10
